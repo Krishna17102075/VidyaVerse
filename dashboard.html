@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vidya Verse | Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h2>Vidya Verse</h2>
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="ai-chat.html">
+                <i class="fa-solid fa-robot"></i>
+                <span>AI Tutor</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="courses.html">
+                <i class="fa-solid fa-book"></i>
+                <span>My Courses</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="planner.html">
+                <i class="fa-solid fa-calendar"></i>
+                <span>Study Planner</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="notes.html">
+                <i class="fa-solid fa-file"></i>
+                <span>Notes</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="progress.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Progress</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <div class="navbar">
+
+        <h2>Welcome Back 👋</h2>
+
+        <div class="profile-area">
+
+    <div class="profile-image-container">
+
+        <img
+            id="profileImage"
+            src="images/default-profile.png"
+            alt=""
+        >
+
+        <label for="profileUpload" class="camera-button">
+            <i class="fa-solid fa-camera"></i>
+        </label>
+
+        <input
+            type="file"
+            id="profileUpload"
+            accept="image/png,image/jpeg,image/jpg,image/webp"
+            hidden
+        >
+
+    </div>
+
+    <i class="fa-solid fa-bell notification-icon"></i>
+
+</div>
+    </div>
+
+    <!-- DASHBOARD CARDS -->
+    <div class="cards">
+
+        <div class="card">
+            <i class="fa-solid fa-book"></i>
+            <h3>Total Notes</h3>
+            <h1 id="notesCount">0</h1>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>Pending Tasks</h3>
+            <h1 id="tasksCount">0</h1>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-book-open"></i>
+            <h3>Study Sessions</h3>
+            <h1 id="studySessionsCount">0</h1>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Average Score</h3>
+            <h1 id="averageScore">0%</h1>
+        </div>
+
+    </div>
+
+    <section class="study-plan">
+
+    <h2>
+        <i class="fa-solid fa-calendar-check"></i>
+        Today's Study Plan
+    </h2>
+
+    <div id="studyPlan">
+
+        <p class="empty-plan">
+            Upload your study material to generate your personalized study plan.
+        </p>
+
+    </div>
+
+</section>
+
+</div>
+
+</div>
+
+<script src="dashboard.js"></script>
+<script src="study-plan.js"></script>
+<script src="notifications.js"></script>
+<link rel="stylesheet" href="study-plan.css">
+    <script src="i18n.js"></script>
+</body>
+</html>
