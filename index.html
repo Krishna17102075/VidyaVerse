@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidya Verse | AI-Powered Learning Assistant</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!------------------ Navigation ------------------>
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h2>Vidya Verse</h2>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="studylearn.html">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="ai-chat.html">AI Tutor</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="buttons">
+        <button class="login" onclick="window.location.href='login.html'">Login</button>
+        <button class="signup" onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+
+    <!-- Mobile Hamburger Toggle -->
+    <div class="menu" id="menuToggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>Vidya Verse</h2>
+        </div>
+        <button class="close-drawer" id="closeDrawer" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-links">
+        <li><a href="studylearn.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#features" class="close-on-click"><i class="fa-solid fa-star"></i> Features</a></li>
+        <li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+        <li><a href="ai-chat.html"><i class="fa-solid fa-robot"></i> AI Tutor</a></li>
+        <li><a href="planner.html"><i class="fa-solid fa-calendar"></i> Study Planner</a></li>
+        <li><a href="notes.html"><i class="fa-solid fa-book"></i> Smart Notes</a></li>
+        <li><a href="quiz.html"><i class="fa-solid fa-circle-question"></i> AI Quiz</a></li>
+        <li><a href="#contact" class="close-on-click"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-buttons">
+        <button class="login" onclick="window.location.href='login.html'">Login</button>
+        <button class="signup" onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+</div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!------------------ Hero Section ------------------>
+<section class="hero">
+    <div class="left">
+        <h1>
+            Learn Smarter with
+            <span>Artificial Intelligence</span>
+        </h1>
+        <p>
+            Vidya Verse empowers students with personalized AI study plans,
+            instant doubt resolution, automated quiz generation,
+            intelligent notes summarization, and live performance tracking.
+        </p>
+        <div class="hero-btn">
+            <button class="primary-btn" onclick="window.location.href='signup.html'">
+                Get Started Free
+            </button>
+            <button class="secondary-btn" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+                Explore Features
+            </button>
+        </div>
+    </div>
+
+    <div class="right">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"
+             alt="Students studying collaboratively">
+    </div>
+</section>
+
+<!------------------ Features ------------------>
+<section class="features" id="features">
+    <h2>Our Intelligent Features</h2>
+
+    <div class="card-container">
+        <a href="ai-chat.html" class="card">
+            <i class="fa-solid fa-robot"></i>
+            <h3>AI Tutor</h3>
+            <p>Ask questions anytime and receive clear, step-by-step academic explanations instantly.</p>
+        </a>
+
+        <a href="planner.html" class="card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h3>Study Planner</h3>
+            <p>Generate optimized daily schedules and prepare for your university exams with ease.</p>
+        </a>
+
+        <a href="notes.html" class="card">
+            <i class="fa-solid fa-book"></i>
+            <h3>Smart Notes</h3>
+            <p>Organize subject notes and use AI to highlight key definitions and revision points.</p>
+        </a>
+
+        <a href="dashboard.html" class="card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Progress Tracker</h3>
+            <p>Monitor your study consistency, quiz attempts, and average scores in real time.</p>
+        </a>
+
+        <a href="notes.html" class="card">
+            <i class="fa-solid fa-file-pdf"></i>
+            <h3>Document Analyzer</h3>
+            <p>Upload PDFs and let AI summarize chapters, highlight formulas, and prepare exam tips.</p>
+        </a>
+    </div>
+</section>
+
+<!------------------ Statistics ------------------>
+<section class="stats">
+    <div class="box">
+        <h2>25K+</h2>
+        <p>Active Students</p>
+    </div>
+    <div class="box">
+        <h2>500+</h2>
+        <p>Curated Topics</p>
+    </div>
+    <div class="box">
+        <h2>98%</h2>
+        <p>Exam Success Rate</p>
+    </div>
+    <div class="box">
+        <h2>24/7</h2>
+        <p>AI Tutor Support</p>
+    </div>
+</section>
+
+<!------------------ About ------------------>
+<section class="about">
+    <div class="about-left">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
+             alt="AI-powered education technology">
+    </div>
+
+    <div class="about-right">
+        <h2>Why Choose Vidya Verse?</h2>
+        <p>
+            Vidya Verse combines cutting-edge Artificial Intelligence with practical academic workflows.
+            Designed specifically for students, it turns heavy textbooks and lecture notes into actionable
+            study plans, interactive quizzes, and concise revision summaries.
+        </p>
+        <button onclick="window.location.href='signup.html'">
+            Join Vidya Verse Today
+        </button>
+    </div>
+</section>
+
+<!------------------ Footer ------------------>
+<footer id="contact">
+    <div>
+        <h2>Vidya Verse</h2>
+        <p>Your Personal AI Learning Assistant.</p>
+    </div>
+
+    <div>
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="studylearn.html" style="color:inherit;text-decoration:none;">Home</a></li>
+            <li><a href="#features" style="color:inherit;text-decoration:none;">Features</a></li>
+            <li><a href="login.html" style="color:inherit;text-decoration:none;">Login</a></li>
+            <li><a href="signup.html" style="color:inherit;text-decoration:none;">Sign Up</a></li>
+        </ul>
+    </div>
+
+    <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/_vidyaverse_/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+</footer>
+
+<script>
+    // Responsive Mobile Menu Drawer Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const closeDrawer = document.getElementById("closeDrawer");
+    const mobileDrawer = document.getElementById("mobileDrawer");
+    const mobileOverlay = document.getElementById("mobileOverlay");
+
+    function openMobileMenu() {
+        mobileDrawer.classList.add("active");
+        mobileOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeMobileMenu() {
+        mobileDrawer.classList.remove("active");
+        mobileOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    if (menuToggle) menuToggle.addEventListener("click", openMobileMenu);
+    if (closeDrawer) closeDrawer.addEventListener("click", closeMobileMenu);
+    if (mobileOverlay) mobileOverlay.addEventListener("click", closeMobileMenu);
+
+    document.querySelectorAll(".close-on-click").forEach(link => {
+        link.addEventListener("click", closeMobileMenu);
+    });
+</script>
+
+    <script src="i18n.js"></script>
+</body>
+</html>
