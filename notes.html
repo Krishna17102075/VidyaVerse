@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vidya Verse | Smart Notes</title>
+
+    <link rel="stylesheet" href="notes.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-note-sticky"></i>
+            <h2>Smart Notes</h2>
+        </div>
+
+        <ul>
+            <li class="active" data-view="all">
+                <i class="fa-solid fa-book"></i>
+                All Notes
+            </li>
+
+            <li data-view="pinned">
+                <i class="fa-solid fa-thumbtack"></i>
+                Pinned
+            </li>
+
+            <li data-view="folders">
+                <i class="fa-solid fa-folder"></i>
+                Folders
+            </li>
+
+            <li data-view="trash">
+                <i class="fa-solid fa-trash"></i>
+                Trash
+            </li>
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Header -->
+        <div class="header">
+
+            <h1>📒 Smart Notes</h1>
+
+            <button id="newNote">
+                <i class="fa-solid fa-plus"></i>
+                New Note
+            </button>
+
+            <button id="newFolder">
+                <i class="fa-solid fa-folder-plus"></i>
+                New Folder
+            </button>
+
+        </div>
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <i class="fa-solid fa-search"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search notes...">
+
+        </div>
+
+        <!-- Note Form -->
+        <div class="note-form">
+
+            <input
+                type="text"
+                id="noteTitle"
+                placeholder="Note Title">
+
+            <input
+                type="text"
+                id="noteTag"
+                placeholder="Tag (HTML, CSS, DBMS...)">
+
+            <textarea
+                id="noteContent"
+                rows="8"
+                placeholder="Write your notes here..."></textarea>
+
+            <div class="buttons">
+
+                <button id="saveNote">
+                    Save Note
+                </button>
+
+                <button id="clearNote">
+                    Clear
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Upload Study Material -->
+        <section class="upload">
+
+            <h3>Upload Study Material</h3>
+
+            <input
+                type="file"
+                id="fileUpload"
+                accept=".pdf,.doc,.docx,.ppt,.pptx">
+
+        </section>
+
+        <!-- Uploaded Files -->
+        <section class="uploaded-files">
+
+            <h3>Uploaded Files</h3>
+
+            <div id="uploadedFiles">
+                <p>Loading uploaded files...</p>
+            </div>
+
+            <div id="analysisResult" class="analysis-box">
+                <!-- AI analysis appears here -->
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- Notes List -->
+        <section class="notes-section">
+
+            <h2>My Notes</h2>
+
+            <div id="notesContainer">
+                <!-- Notes appear here -->
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- Existing notes functionality -->
+<script src="notes.js"></script>
+
+<!-- Uploaded files: upload, list and delete -->
+<script src="uploaded-files.js"></script>
+
+<script src="i18n.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Progress | VidyaVerse</title>
+
+    <link rel="stylesheet" href="progress.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="progress-layout">
+        <aside class="sidebar">
+            <a href="dashboard.html" class="brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>VidyaVerse</span>
+            </a>
+
+            <p class="sidebar-label">LEARNING</p>
+
+            <nav class="nav-links">
+                <a href="dashboard.html">
+                    <i class="fas fa-house"></i><span>Dashboard</span>
+                </a>
+                <a href="ai-chat.html">
+                    <i class="fas fa-robot"></i><span>AI Tutor</span>
+                </a>
+                <a href="courses.html">
+                    <i class="fas fa-book-open"></i><span>My Courses</span>
+                </a>
+                <a href="planner.html">
+                    <i class="fas fa-calendar-days"></i><span>Study Planner</span>
+                </a>
+                <a href="notes.html">
+                    <i class="fas fa-note-sticky"></i><span>Smart Notes</span>
+                </a>
+                <a href="progress.html" class="active">
+                    <i class="fas fa-chart-line"></i><span>Progress</span>
+                </a>
+                <a href="settings.html">
+                    <i class="fas fa-gear"></i><span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-avatar">V</div>
+                <div>
+                    <strong>My Learning</strong>
+                    <small>Keep growing every day</small>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">YOUR LEARNING JOURNEY</span>
+                    <h1>My Progress</h1>
+                    <p>Track your achievements and see how far you've come.</p>
+                </div>
+                <a href="courses.html" class="primary-button">
+                    <i class="fas fa-book-open"></i> Continue Learning
+                </a>
+            </header>
+
+            <section class="welcome-banner">
+                <div>
+                    <span class="eyebrow">EVERY LESSON COUNTS</span>
+                    <h2>You're building your future, one lesson at a time.</h2>
+                    <p>Stay consistent. Small steps lead to big achievements.</p>
+                </div>
+                <div class="banner-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+            </section>
+
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-book-open"></i></div>
+                    <span>Enrolled Courses</span>
+                    <strong id="totalCourses">4</strong>
+                    <small>Your learning library</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-circle-check"></i></div>
+                    <span>Completed Lessons</span>
+                    <strong id="completedLessons">0</strong>
+                    <small>Lessons you've finished</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-chart-pie"></i></div>
+                    <span>Overall Progress</span>
+                    <strong id="overallProgress">0%</strong>
+                    <small>Across all courses</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
+                    <span>Remaining Lessons</span>
+                    <strong id="remainingLessons">40</strong>
+                    <small>Keep moving forward</small>
+                </article>
+            </section>
+
+            <section class="overall-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Overall Learning Progress</h2>
+                        <p>Your progress across all available courses.</p>
+                    </div>
+                    <span id="overallFraction">0 / 40 lessons</span>
+                </div>
+
+                <div class="overall-track">
+                    <div id="overallProgressBar" class="overall-fill"></div>
+                </div>
+
+                <div class="overall-footer">
+                    <span id="overallMessage">Your learning journey starts here.</span>
+                    <span id="overallPercentLabel">0% complete</span>
+                </div>
+            </section>
+
+            <section class="courses-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>Course Performance</h2>
+                        <p>Review progress in each subject.</p>
+                    </div>
+                    <a href="courses.html" class="text-link">Explore courses <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div id="progressCourseList" class="progress-course-list"></div>
+            </section>
+
+            <section class="activity-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Learning Summary</h2>
+                        <p>A quick overview of your current study status.</p>
+                    </div>
+                </div>
+                <div id="learningSummary" class="summary-content">
+                    Start a course to begin building your learning history.
+                </div>
+            </section>
+
+            <footer class="page-footer">
+                <span>Made for curious minds.</span>
+                <span>VidyaVerse © 2026</span>
+            </footer>
+        </main>
+    </div>
+
+    <script src="progress.js"></script>
+    <script src="i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,864 @@
+/* ======================================
+   GOOGLE FONTS
+====================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ======================================
+   DESIGN TOKENS
+   Palette: pearl base, burgundy + blush pink, rose-gold shine
+====================================== */
+
+:root{
+    --primary:#B23A54;
+    --primary-dark:#8C2C41;
+    --accent:#D9A79C;
+    --accent-bright:#F2DCCF;
+    --light:#FBEDE8;
+    --light-glow:rgba(242,220,207,0.55);
+
+    --background:#FDF7F4;
+    --card:#ffffff;
+    --text:#3B1420;
+    --muted:#8A5C63;
+    --border:#F0DDD7;
+
+    --danger:#EF4444;
+}
+
+/* ======================================
+   RESET
+====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+h1,h2,h3{
+    font-family:'Cormorant Garamond','Poppins',serif;
+}
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+/* ======================================
+   CONTAINER
+====================================== */
+
+.container{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* ======================================
+   SIDEBAR
+====================================== */
+
+.sidebar{
+
+    width:260px;
+
+    background:linear-gradient(180deg,var(--primary-dark),var(--primary) 55%,var(--accent));
+
+    color:white;
+
+    padding:30px 20px;
+
+    box-shadow:6px 0 24px rgba(140,44,65,0.12);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:45px;
+
+}
+
+.logo i{
+
+    font-size:32px;
+
+    color:var(--light);
+
+    text-shadow:0 0 14px rgba(255,255,255,0.5);
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar ul li{
+
+    padding:16px;
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    transition:.3s;
+
+}
+
+.sidebar ul li:hover{
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.sidebar ul li.active{
+
+    background:var(--light);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    box-shadow:0 4px 14px rgba(255,255,255,0.35);
+
+}
+
+/* ======================================
+   MAIN
+====================================== */
+
+.main{
+
+    flex:1;
+
+    padding:40px;
+
+}
+
+/* ======================================
+   HEADER
+====================================== */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.header h1{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.header button{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(135deg,var(--accent-bright),var(--primary));
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.header button::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,0.7), transparent);
+
+    transform:skewX(-20deg);
+
+    transition:left .6s ease;
+
+}
+
+.header button:hover::after{
+
+    left:140%;
+
+}
+
+.header button:hover{
+
+    box-shadow:0 10px 22px rgba(178,58,84,.3);
+
+    transform:translateY(-2px);
+
+}
+
+/* ======================================
+   SEARCH
+====================================== */
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:14px 18px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 6px 18px rgba(140,44,65,.06);
+
+}
+
+.search-box i{
+
+    color:var(--primary);
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    font-size:15px;
+
+    color:var(--text);
+
+    background:transparent;
+
+}
+
+.search-box input::placeholder{
+
+    color:var(--muted);
+
+}
+
+/* ======================================
+   NOTE FORM
+====================================== */
+
+.note-form{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    box-shadow:0 8px 24px rgba(140,44,65,.08);
+
+}
+
+.note-form input,
+.note-form textarea{
+
+    width:100%;
+
+    border:1px solid transparent;
+
+    outline:none;
+
+    background:var(--light);
+
+    color:var(--text);
+
+    border-radius:10px;
+
+    padding:14px 16px;
+
+    font-size:15px;
+
+    resize:vertical;
+
+    transition:.3s;
+
+}
+
+.note-form input::placeholder,
+.note-form textarea::placeholder{
+
+    color:var(--muted);
+
+}
+
+.note-form input:focus,
+.note-form textarea:focus{
+
+    border-color:var(--primary);
+
+    background:#ffffff;
+
+    box-shadow:0 0 0 4px var(--light-glow);
+
+}
+
+.note-form .buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.note-form .buttons button{
+
+    flex:1;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#saveNote{
+
+    background:linear-gradient(135deg,var(--accent-bright),var(--primary));
+
+    color:white;
+
+}
+
+#saveNote:hover{
+
+    box-shadow:0 10px 22px rgba(178,58,84,.3);
+
+    transform:translateY(-2px);
+
+}
+
+#clearNote{
+
+    background:var(--light);
+
+    color:var(--primary);
+
+}
+
+#clearNote:hover{
+
+    background:var(--border);
+
+}
+
+/* ======================================
+   UPLOAD
+====================================== */
+
+.upload{
+
+    background:var(--card);
+
+    border:1px dashed var(--accent);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 8px 24px rgba(140,44,65,.06);
+
+}
+
+.upload h3{
+
+    margin-bottom:15px;
+
+    color:var(--text);
+
+    font-weight:700;
+
+}
+
+.upload input[type="file"]{
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    background:var(--light);
+
+    color:var(--muted);
+
+    border:1px solid var(--border);
+
+    cursor:pointer;
+
+}
+
+/* ======================================
+   UPLOADED FILES
+====================================== */
+
+.uploaded-files{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 8px 24px rgba(140,44,65,.06);
+
+}
+
+.uploaded-files h3{
+
+    margin-bottom:18px;
+
+    color:var(--text);
+
+    font-weight:700;
+
+}
+
+#uploadedFiles{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+    gap:15px;
+
+}
+
+#uploadedFiles:empty::after{
+
+    content:"No files uploaded yet.";
+
+    color:var(--muted);
+
+    font-size:14px;
+
+}
+
+.file-card{
+
+    background:var(--light);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:16px;
+
+    font-size:14px;
+
+    color:var(--text);
+
+}
+
+.analysis-box{
+
+    margin-top:20px;
+
+    background:var(--light);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:18px;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    min-height:40px;
+
+}
+
+hr{
+
+    border:none;
+
+    border-top:1px solid var(--border);
+
+    margin:30px 0;
+
+}
+
+/* ======================================
+   NOTES SECTION
+====================================== */
+
+.notes-section h2{
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+#notesContainer{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+
+    gap:20px;
+
+}
+
+#notesContainer:empty::after{
+
+    content:"Your saved notes will appear here.";
+
+    color:var(--muted);
+
+    font-size:14px;
+
+}
+
+.note-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(140,44,65,.08);
+
+    transition:.3s;
+
+}
+
+.note-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 14px 30px rgba(140,44,65,.14);
+
+}
+
+.note-card h4{
+
+    color:var(--text);
+
+    margin-bottom:8px;
+
+}
+
+.note-card p{
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    margin-bottom:12px;
+
+}
+
+.note-card .tag{
+
+    display:inline-block;
+
+    background:var(--light);
+
+    color:var(--primary);
+
+    padding:4px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media(max-width:900px){
+
+.container{
+
+flex-direction:column;
+
+}
+
+.sidebar{
+
+width:100%;
+
+}
+
+.note-form .buttons{
+
+flex-direction:column;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.main{
+
+padding:20px;
+
+}
+
+.header{
+
+flex-direction:column;
+
+gap:15px;
+
+align-items:flex-start;
+
+}
+
+#uploadedFiles,
+#notesContainer{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+.note-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.note-actions button,
+.folder-controls button {
+    border: 1px solid var(--border);
+    background: var(--light);
+    color: var(--primary-dark);
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.note-actions button:hover,
+.folder-controls button:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.folder-controls {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.folder-controls h3 {
+    width: 100%;
+    color: var(--text);
+}
+
+.empty-message {
+    grid-column: 1 / -1;
+    padding: 24px;
+    text-align: center;
+    color: var(--muted);
+    background: white;
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+}
+
+
+/* ==========================================
+   UPLOADED FILE CARDS
+========================================== */
+
+#uploadedFiles {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.uploaded-file-card {
+    background: #fcedea;
+    border: 1px solid #f0d6d0;
+    border-radius: 14px;
+    padding: 18px;
+    transition: 0.25s ease;
+}
+
+.uploaded-file-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(80, 30, 40, 0.08);
+}
+
+.uploaded-file-card h4 {
+    color: #4b2330;
+    font-size: 15px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    margin: 0 0 14px;
+}
+
+.uploaded-file-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.uploaded-file-actions button {
+    border-radius: 7px;
+    padding: 8px 13px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.analyze-file-btn {
+    background: #fff;
+    color: #74364b;
+    border: 1px solid #d9aeb9;
+}
+
+.analyze-file-btn:hover {
+    background: #74364b;
+    color: #fff;
+}
+
+.delete-file-btn {
+    background: #fff0f0;
+    color: #a8324a;
+    border: 1px solid #e9b9c3;
+}
+
+.delete-file-btn:hover {
+    background: #a8324a;
+    color: #fff;
+}
+
+.uploaded-file-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#uploadedFiles > p {
+    color: #956d78;
+    font-size: 14px;
+}

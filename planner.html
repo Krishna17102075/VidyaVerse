@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner | VidyaVerse</title>
+
+    <link rel="stylesheet" href="planner.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="app-layout">
+    <aside class="sidebar">
+        <a class="brand" href="dashboard.html">
+            <i class="fas fa-graduation-cap"></i> VidyaVerse
+        </a>
+
+        <p class="nav-label">LEARNING</p>
+        <nav class="nav-links">
+            <a href="dashboard.html"><i class="fas fa-house"></i> Dashboard</a>
+            <a href="ai-chat.html"><i class="fas fa-robot"></i> AI Tutor</a>
+            <a href="courses.html"><i class="fas fa-book-open"></i> My Courses</a>
+            <a href="planner.html" class="active"><i class="fas fa-calendar-days"></i> Study Planner</a>
+            <a href="notes.html"><i class="fas fa-note-sticky"></i> Smart Notes</a>
+            <a href="progress.html"><i class="fas fa-chart-line"></i> Progress</a>
+            <a href="settings.html"><i class="fas fa-gear"></i> Settings</a>
+        </nav>
+
+        <p class="nav-label">YOUR PLANNER</p>
+        <nav class="planner-nav">
+            <button class="planner-tab active" data-view="today">
+                <i class="fas fa-list-check"></i> Today's Tasks
+            </button>
+            <button class="planner-tab" data-view="week">
+                <i class="fas fa-calendar-week"></i> Weekly Plan
+            </button>
+            <button class="planner-tab" data-view="goals">
+                <i class="fas fa-bullseye"></i> Goals
+            </button>
+            <button class="planner-tab" data-view="progress">
+                <i class="fas fa-chart-line"></i> Progress
+            </button>
+        </nav>
+
+        <div class="sidebar-note">
+            <i class="fas fa-heart"></i>
+            <p>Small steps every day lead to big achievements.</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="page-header">
+            <div>
+                <span class="eyebrow">YOUR PERSONAL LEARNING SPACE</span>
+                <h1 id="pageTitle">Today's Tasks</h1>
+                <p id="pageSubtitle">Make today count. One task at a time.</p>
+            </div>
+            <div class="date-badge">
+                <i class="far fa-calendar"></i>
+                <span id="currentDate"></span>
+            </div>
+        </header>
+
+        <section class="welcome-banner">
+            <div>
+                <span class="eyebrow">YOUR LEARNING JOURNEY</span>
+                <h2>Plan your time. Reach your goals.</h2>
+                <p>Organize your studies and celebrate every little win.</p>
+            </div>
+            <div class="banner-icon"><i class="fas fa-book-open"></i></div>
+        </section>
+
+        <section class="quick-stats">
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-list-check"></i></span>
+                <p>Total Tasks</p>
+                <strong id="totalTasks">0</strong>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-circle-check"></i></span>
+                <p>Tasks Completed</p>
+                <strong id="completedTasks">0</strong>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-bullseye"></i></span>
+                <p>Active Goals</p>
+                <strong id="activeGoals">0</strong>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-trophy"></i></span>
+                <p>Completion Rate</p>
+                <strong id="completionRate">0%</strong>
+            </article>
+        </section>
+
+        <section id="plannerContent" class="planner-content">
+            <!-- planner.js renders the selected section here -->
+        </section>
+
+        <footer class="page-footer">
+            <span>Made for curious minds.</span>
+            <span>VidyaVerse © 2026</span>
+        </footer>
+    </main>
+</div>
+
+<script src="planner.js"></script>
+    <script src="i18n.js"></script>
+</body>
+</html>

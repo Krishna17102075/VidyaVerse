@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VidyaVerse | My Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="courses.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<div class="page-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="brand">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>VidyaVerse</span>
+        </a>
+
+        <p class="sidebar-label">LEARNING</p>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="ai-chat.html">
+                <i class="fa-solid fa-robot"></i>
+                AI Tutor
+            </a>
+
+            <a href="courses.html" class="active">
+                <i class="fa-solid fa-book-open"></i>
+                My Courses
+            </a>
+
+            <a href="planner.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                Study Planner
+            </a>
+
+            <a href="notes.html">
+                <i class="fa-solid fa-note-sticky"></i>
+                Smart Notes
+            </a>
+
+            <a href="quiz.html">
+                <i class="fa-solid fa-circle-question"></i>
+                Quizzes
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                My Profile
+            </a>
+
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP HEADER -->
+        <header class="top-header">
+
+            <div>
+                <p class="eyebrow">YOUR LEARNING SPACE</p>
+                <h1>My Courses</h1>
+                <p class="subtitle">
+                    Learn new skills and make progress every day.
+                </p>
+            </div>
+
+            <a href="profile.html" class="profile-button"
+               aria-label="Open profile">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+        </header>
+
+        <!-- WELCOME BANNER -->
+        <section class="welcome-banner">
+
+            <div class="banner-content">
+                <span class="banner-tag">BCA LEARNING PATH</span>
+
+                <h2>Build your future, one lesson at a time.</h2>
+
+                <p>
+                    Explore programming, web development, databases,
+                    and computer networking.
+                </p>
+
+                <a href="#courseGrid" class="banner-button">
+                    Explore Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="banner-icon" aria-hidden="true">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+        </section>
+
+        <!-- SUMMARY CARDS -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div>
+                    <p>Total Courses</p>
+                    <h3 id="totalCourses">4</h3>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div>
+                    <p>Completed Lessons</p>
+                    <h3 id="completedLessons">0</h3>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div>
+                    <p>Overall Progress</p>
+                    <h3 id="overallProgress">0%</h3>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- CONTINUE LEARNING -->
+        <section class="continue-section" id="continueSection" hidden>
+
+            <div class="section-heading">
+                <div>
+                    <h2>Continue Learning</h2>
+                    <p>Pick up where you left off.</p>
+                </div>
+            </div>
+
+            <div id="continueCard"></div>
+
+        </section>
+
+        <!-- COURSES -->
+        <section class="courses-section" id="courseGrid">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Explore Your Courses</h2>
+                    <p>Choose a subject and start learning.</p>
+                </div>
+
+                <div class="course-count">
+                    <i class="fa-solid fa-book"></i>
+                    <span id="courseCount">4 Courses</span>
+                </div>
+
+            </div>
+
+            <!-- SEARCH AND FILTER -->
+            <div class="filter-bar">
+
+                <div class="course-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="search"
+                           id="courseSearch"
+                           placeholder="Search courses..."
+                           aria-label="Search courses">
+                </div>
+
+                <select id="categoryFilter" aria-label="Filter by category">
+                    <option value="all">All Categories</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Database">Database</option>
+                    <option value="Networking">Networking</option>
+                </select>
+
+            </div>
+
+            <!-- JS RENDERS COURSE CARDS HERE -->
+            <div class="course-grid" id="courseCards"></div>
+
+            <p class="empty-state" id="emptyCourses" hidden>
+                No courses match your search.
+            </p>
+
+        </section>
+
+        <!-- LESSON VIEW -->
+        <section class="lesson-section" id="lessonPanel" hidden>
+
+            <button type="button" class="back-button" id="backToCourses">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Courses
+            </button>
+
+            <div class="lesson-header">
+                <div>
+                    <p class="eyebrow">YOUR COURSE</p>
+                    <h2 id="lessonCourseTitle">Course Title</h2>
+                    <p id="lessonCourseDescription"></p>
+                </div>
+
+                <div class="lesson-progress">
+                    <span id="lessonProgressText">0% complete</span>
+
+                    <div class="progress-track">
+                        <div class="progress-fill" id="lessonProgressFill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-layout">
+
+                <div class="lesson-list-panel">
+                    <h3>Course Lessons</h3>
+
+                    <p class="muted-text">
+                        Mark lessons complete as you study.
+                    </p>
+
+                    <div id="lessonList"></div>
+                </div>
+
+                <div class="lesson-detail-panel">
+
+                    <div class="lesson-detail-icon">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+
+                    <p class="eyebrow">LESSON DETAILS</p>
+
+                    <h3 id="selectedLessonTitle">
+                        Select a lesson
+                    </h3>
+
+                    <div id="selectedLessonContent">
+                        <p>
+                            Choose a lesson from the list to begin.
+                        </p>
+                    </div>
+
+                    
+                    <!-- Lesson Video Player -->
+                    <div id="lessonVideo" class="lesson-video" hidden>
+                        <h3><i class="fa-brands fa-youtube"></i> Lesson Video</h3>
+
+                        <div class="video-container">
+                        <iframe
+                           id="lessonVideoFrame"
+                           src=""
+                           title="Course lesson video"
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                           referrerpolicy="strict-origin-when-cross-origin"
+                           allowfullscreen>
+                       </iframe>
+                       </div>
+                    </div>
+
+                    <div class="lesson-actions">
+
+                        <button type="button"
+                                id="previousLesson"
+                                class="secondary-button">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Previous
+                        </button>
+
+                        <button type="button"
+                                id="completeLesson"
+                                class="primary-button"
+                                disabled>
+                            Mark Complete
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+
+                        <button type="button"
+                                id="nextLesson"
+                                class="secondary-button">
+                            Next
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="page-footer">
+            <p>© 2026 VidyaVerse. Learn something new every day.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="courses.js"></script>
+
+    <script src="i18n.js"></script>
+</body>
+</html>

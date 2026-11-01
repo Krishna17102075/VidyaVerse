@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Vidya Verse | Settings</title>
+
+    <link rel="stylesheet" href="settings.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h2>Vidya Verse</h2>
+
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="chat.html">
+                <i class="fa-solid fa-robot"></i>
+                <span>AI Tutor</span>
+            </a>
+
+            <a href="notes.html">
+                <i class="fa-solid fa-note-sticky"></i>
+                <span>Smart Notes</span>
+            </a>
+
+            <a href="files.html">
+                <i class="fa-solid fa-folder"></i>
+                <span>Study Files</span>
+            </a>
+
+            <a href="settings.html" class="active">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </h1>
+
+                <p>
+                    Manage your Vidya Verse preferences
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= LANGUAGE ================= -->
+        <section class="settings-card">
+            <div class="section-title">
+                <i class="fa-solid fa-language"></i>
+                <div>
+                    <h2>Language</h2>
+                    <p>Choose your preferred language. Your choice is saved on this device.</p>
+                </div>
+            </div>
+            <div class="setting-row">
+                <div>
+                    <h3>Display language</h3>
+                    <p>English, Hindi or Punjabi</p>
+                </div>
+                <select id="settingsLanguage" aria-label="Choose display language">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="pa">ਪੰਜਾਬੀ</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- ================= PROFILE ================= -->
+
+        <section class="settings-card">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-user"></i>
+
+                <div>
+
+                    <h2>Profile</h2>
+
+                    <p>Your account information</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-box">
+
+                <div class="avatar" id="avatar">
+
+                    K
+
+                </div>
+
+                <div>
+
+                    <h3 id="profileName">
+                        Student
+                    </h3>
+
+                    <p id="profileEmail">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPEARANCE ================= -->
+
+        <section class="settings-card">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-palette"></i>
+
+                <div>
+
+                    <h2>Appearance</h2>
+
+                    <p>Customize how Vidya Verse looks</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Dark Mode</h3>
+
+                    <p>
+                        Use a darker interface for comfortable viewing.
+                    </p>
+
+                </div>
+
+                <label class="switch">
+
+                    <input type="checkbox"
+                           id="darkMode">
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NOTIFICATIONS ================= -->
+
+        <section class="settings-card">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <div>
+
+                    <h2>Notifications</h2>
+
+                    <p>Manage notification preferences</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Notifications</h3>
+
+                    <p>
+                        Enable notifications from Vidya Verse.
+                    </p>
+
+                </div>
+
+                <label class="switch">
+
+                    <input type="checkbox"
+                           id="notifications"
+                           checked>
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACCOUNT ================= -->
+
+        <section class="settings-card">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <div>
+
+                    <h2>Account</h2>
+
+                    <p>Manage your account</p>
+
+                </div>
+
+            </div>
+
+
+            <button class="logout-btn"
+                    id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="settings-card about">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <div>
+
+                    <h2>About</h2>
+
+                    <p>Application information</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <h3>🧠 Vidya Verse</h3>
+
+                <p>
+                    AI-powered personal learning assistant
+                    designed to help students study smarter.
+                </p>
+
+                <span>
+                    Version 1.0
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="settings.js"></script>
+
+    <script src="i18n.js"></script>
+</body>
+
+</html>
